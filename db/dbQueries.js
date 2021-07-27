@@ -59,7 +59,7 @@ class DB {
     // Update an existing employee with a new role
     updateExistingEmployee(employee, roleId) {
         return this.connection.query(
-            "SELECT CONCAT (first_name,' ',last_name) AS full_name FROM employees;",
+            "SELECT CONCAT(first_name,' ',last_name) AS full_name FROM employees;",
             "UPDATE employee(full_name, role_id) VALUES (?, ?);", [employee, roleId]
         )
     }
