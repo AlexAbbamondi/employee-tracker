@@ -31,7 +31,7 @@ class DB {
     // Select all the manangers
     findAllManagers() {
         return this.connection.query(
-            "SELECT first_name, last_name FROM employee WHERE manager_id IS NULL"        
+            "SELECT first_name, last_name FROM employee"        
         )
     }
 

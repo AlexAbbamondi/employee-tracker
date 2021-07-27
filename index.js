@@ -83,7 +83,7 @@ async function addDepartment() {
 // Function to get all the departments and put them in an array to index in addRole()
 const departmentArray = [];
 async function selectDepartment() {
-    let departments = await db.findAllDepartments();
+    let departments = await db.findAllDepartments() + 1;
     for (let i = 0; i < departments.length; i++) {
         departmentArray.push(departments[i].name); 
     }
